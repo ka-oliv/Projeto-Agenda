@@ -1,0 +1,49 @@
+<%- include('includes/head') %>
+    <%- include('includes/nav') %>
+
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-2"></div>
+
+                <div class="col-lg-8 my-3">
+                    <h1 class="text-center">Cadastre-se</h1>
+                    <p class="text-center lead">Para criar sua conta insira seus dados abaixo:</p>
+
+                    <div class="row d-flex justify-content-center">
+                        <div class="col-lg-8">
+
+                            <%- include('includes/messages'); %>
+
+                                <form class="form-register" action="/register/registerOn" method="post">
+                                    <input type="hidden" name="_csrf" value=<%=csrfToken %>>
+                                    <div class="form-group">
+                                        <label for="inputNome">Nome</label>
+                                        <input type="text" class="form-control need-validation" id="inputNome" name="Nome"
+                                            placeholder="Digite seu nome">
+                                        <label for="inputEmail">Email</label>
+                                        <input type="email" class="form-control need-validation" id="inputEmail" name="email"
+                                            aria-describedby="emailHelp" placeholder="Digite seu email">
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="inputPassword">Senha</label>
+                                        <input type="password" class="form-control need-validation senha" id="inputPassword" name="password"
+                                            placeholder="Crie sua senha">
+
+                                        <label for="inputRepeatPassword">Repetir senha</label>
+                                        <input type="password" class="form-control need-validation senha" id="inputRepeatPassword"
+                                            name="repeatPassword" placeholder="Confirme sua senha">
+                                    </div>
+                                    <button type="submit" class="btn btn-primary my-3">Criar conta</button>
+                                    <p class="mt-1"><a href="/login/index"> Voltar à página de login </a></p>
+                                </form>
+                        </div>
+                    </div>
+
+                </div>
+
+                <div class="col-lg-2"></div>
+            </div>
+        </div>
+
+
+        <%- include('includes/footer') %>

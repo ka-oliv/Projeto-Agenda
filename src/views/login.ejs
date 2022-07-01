@@ -1,0 +1,44 @@
+<%- include('includes/head') %>
+    <%- include('includes/nav') %>
+
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-2"></div>
+
+                <div class="col-lg-8 my-3">
+
+                    <h1 class="text-center">Login</h1>
+                    <p class="text-center lead">Para entrar insira seus dados abaixo:</p>
+
+                    <div class="row d-flex justify-content-center">
+                        <div class="col-lg-8">
+                            <%- include('includes/messages'); %>
+                            <h4>Entrar</h4>
+
+                            <form  class="form-login" action="/login/loggon" method="POST">
+                                <input type="hidden" name="_csrf" value=<%=csrfToken %>>
+                                <div class="form-group">
+                                    <label for="InputEmail">Email</label>
+                                    <input type="email" class="form-control" id="InputEmail" name="email"
+                                        aria-describedby="emailHelp" placeholder="Digite seu email">
+                                </div>
+                                <div class="form-group">
+                                    <label for="InputPassword">Senha</label>
+                                    <input type="password" class="form-control" id="InputPassword" name="password"
+                                        placeholder="senha">
+                                    <p class="mt-1"> Se você ainda não tem conta, ta esperando o que cara de cu... <a
+                                            href="/register/index">Criar conta</a></p>
+                                </div>
+                                <button type="submit" class="btn btn-primary">Entrar</button>
+                            </form>
+                        </div>
+                    </div>
+
+                </div>
+
+                <div class="col-lg-2"></div>
+            </div>
+        </div>
+
+
+        <%- include('includes/footer') %>

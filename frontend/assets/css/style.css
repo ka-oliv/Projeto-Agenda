@@ -1,0 +1,21 @@
+.error-text {
+    font-size: 12px;
+    color: red;
+    background: rgb(21, 21, 21);;
+}
+
+input{
+    margin-bottom: 8px;
+}
+ 
+body {
+    background: rgb(21, 21, 21);
+    color: #32CD32;
+}
+
+.green-color {
+    color: #32CD32;
+    text-decoration: none;
+    font-weight: 500;
+}
+ 
